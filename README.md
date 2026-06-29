@@ -75,6 +75,7 @@ Once inside the picker:
 |-----|-------------|
 | `Enter` | Switch to workspace (create if none exists) |
 | `Ctrl-n` | Always create a new workspace |
+| `Ctrl-w` | Open as a new herdr worktree |
 | `Ctrl-e` | Open project in `$EDITOR` |
 | `Ctrl-t` | Open new herdr tab with project as CWD |
 | `Ctrl-r` | Clear pj cache and reload project list |

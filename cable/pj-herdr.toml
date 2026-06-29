@@ -17,6 +17,7 @@ command = "eza --tree --color=always \"$(echo {strip_ansi|split: :1} | sed 's|^~
 [keybindings]
 enter = "actions:connect"
 ctrl-n = "actions:new_workspace"
+ctrl-w = "actions:worktree"
 ctrl-e = "actions:edit"
 ctrl-t = "actions:new_tab"
 ctrl-r = ["actions:clear_cache", "reload_source"]
@@ -29,6 +30,11 @@ mode = "execute"
 [actions.new_workspace]
 description = "Always create a new herdr workspace"
 command = "$HERDR_PLUGIN_ROOT/scripts/pj-connect.sh --new \"$(echo {strip_ansi|split: :1} | sed 's|^~|$HOME|')\""
+mode = "execute"
+
+[actions.worktree]
+description = "Open as a new herdr worktree"
+command = "herdr worktree open --cwd \"$(echo {strip_ansi|split: :1} | sed 's|^~|$HOME|')\" --focus"
 mode = "execute"
 
 [actions.edit]

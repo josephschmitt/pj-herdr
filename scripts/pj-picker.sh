@@ -97,8 +97,8 @@ case "$PICKER" in
             --reverse \
             --preview "$PREVIEW_CMD" \
             --preview-window=right:50% \
-            --header "enter: open workspace  ctrl-n: new workspace  ctrl-e: edit  ctrl-t: new tab  ctrl-r: clear cache" \
-            --expect "ctrl-n,ctrl-e,ctrl-t,ctrl-r" \
+            --header "enter: open workspace  ctrl-n: new workspace  ctrl-w: worktree  ctrl-e: edit  ctrl-t: new tab  ctrl-r: clear cache" \
+            --expect "ctrl-n,ctrl-w,ctrl-e,ctrl-t,ctrl-r" \
             --bind "ctrl-r:reload($RELOAD_CMD)" \
       || true)
 
@@ -112,6 +112,7 @@ case "$PICKER" in
 
     case "$KEY" in
       ctrl-n) "$CONNECT_SCRIPT" --new "$PROJECT_PATH" ;;
+      ctrl-w) herdr worktree open --cwd "$PROJECT_PATH" --focus ;;
       ctrl-e) ${EDITOR:-vi} "$PROJECT_PATH" ;;
       ctrl-t) herdr tab create --cwd "$PROJECT_PATH" --focus ;;
       ctrl-r) ;; # handled inline by fzf --bind reload
