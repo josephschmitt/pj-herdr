@@ -65,11 +65,16 @@ echo "picker=tv" > "$(herdr plugin config-dir pj)/config"
 | `tv` | Always use Television |
 | `fzf` | Always use fzf |
 
-## Keybindings
+## Actions
 
-| Key | Action |
-|-----|--------|
-| `Ctrl-s O` | Open project picker |
+| Action ID | Description |
+|-----------|-------------|
+| `pj.open-picker` | Open the project picker overlay |
+
+Once inside the picker:
+
+| Key | Description |
+|-----|-------------|
 | `Enter` | Switch to workspace (create if none exists) |
 | `Ctrl-n` | Always create a new workspace |
 | `Ctrl-e` | Open project in `$EDITOR` |
