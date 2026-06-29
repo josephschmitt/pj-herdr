@@ -18,7 +18,7 @@ contexts = ["workspace"]
 command = ["bash", "-c", "$HERDR_BIN_PATH plugin pane open --plugin pj --entrypoint picker"]
 
 [[keys.command]]
-key = "prefix+shift+p"
+key = "prefix+o"
 type = "plugin_action"
 command = "pj.open-picker"
 description = "Find and open a project (pj)"
