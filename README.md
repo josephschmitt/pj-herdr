@@ -65,10 +65,10 @@ echo "picker=tv" > "$(herdr plugin config-dir pj)/config"
 | `tv` | Always use Television |
 | `fzf` | Always use fzf |
 
-## Actions
+## Commands
 
-| Action ID | Description |
-|-----------|-------------|
+| Command | Description |
+|---------|-------------|
 | `pj.open-picker` | Open the project picker overlay |
 
 Once inside the picker:
