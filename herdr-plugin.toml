@@ -15,7 +15,7 @@ command = ["bash", "-lc", "$HERDR_PLUGIN_ROOT/scripts/pj-picker.sh"]
 id = "open-picker"
 title = "Open project picker"
 contexts = ["workspace"]
-command = ["bash", "-c", "$HERDR_BIN_PATH plugin pane open --plugin pj --entrypoint picker"]
+command = ["bash", "-c", "$HERDR_BIN_PATH plugin pane open --plugin pj --entrypoint picker --placement overlay --focus"]
 
 [[keys.command]]
 key = "prefix+o"
