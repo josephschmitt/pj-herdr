@@ -84,8 +84,6 @@ Valid values: `tv`, `fzf`, `auto` (default — prefers tv if installed, falls ba
 # Link plugin for local development (run once)
 herdr plugin link ~/development/pj-herdr
 
-# Symlink TV cable channel (run once, only needed for picker=tv)
-ln -sf ~/development/pj-herdr/cable/pj-herdr.toml ~/.config/television/cable/pj-herdr.toml
 
 # Make scripts executable (run once)
 chmod +x ~/development/pj-herdr/scripts/*.sh

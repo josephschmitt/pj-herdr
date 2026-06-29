@@ -25,7 +25,7 @@ case "$PICKER" in
   tv)
     # Television with the pj-herdr cable channel.
     # The channel handles all actions (connect, new_workspace, edit, new_tab, clear_cache).
-    tv pj-herdr
+    tv --cable-dir "$PLUGIN_ROOT/cable" pj-herdr
     ;;
   fzf)
     # fzf fallback — simpler but functional, same keybindings as the TV channel.

@@ -42,12 +42,6 @@ Then reload:
 herdr server reload-config
 ```
 
-If you're using the **Television picker** (the default when `tv` is installed), also symlink the cable channel:
-
-```bash
-ln -sf "$(herdr plugin root pj)/cable/pj-herdr.toml" ~/.config/television/cable/pj-herdr.toml
-```
-
 ## Configuration
 
 Create a config file at `$(herdr plugin config-dir pj)/config`:
@@ -88,9 +82,6 @@ cd ~/development/pj-herdr
 
 # Link for local development
 herdr plugin link .
-
-# Symlink the TV cable channel
-ln -sf "$(pwd)/cable/pj-herdr.toml" ~/.config/television/cable/pj-herdr.toml
 
 # Make scripts executable
 chmod +x scripts/*.sh
