@@ -48,24 +48,6 @@ If you're using the **Television picker** (the default when `tv` is installed), 
 ln -sf "$(herdr plugin root pj)/cable/pj-herdr.toml" ~/.config/television/cable/pj-herdr.toml
 ```
 
-## Development
-
-```bash
-cd ~/development/pj-herdr
-
-# Link for local development
-herdr plugin link .
-
-# Symlink the TV cable channel
-ln -sf "$(pwd)/cable/pj-herdr.toml" ~/.config/television/cable/pj-herdr.toml
-
-# Make scripts executable
-chmod +x scripts/*.sh
-
-# Reload herdr config
-herdr server reload-config
-```
-
 ## Configuration
 
 Create a config file at `$(herdr plugin config-dir pj)/config`:
@@ -93,6 +75,24 @@ echo "picker=tv" > "$(herdr plugin config-dir pj)/config"
 | `Ctrl-e` | Open project in `$EDITOR` |
 | `Ctrl-t` | Open new herdr tab with project as CWD |
 | `Ctrl-r` | Clear pj cache and reload project list |
+
+## Development
+
+```bash
+cd ~/development/pj-herdr
+
+# Link for local development
+herdr plugin link .
+
+# Symlink the TV cable channel
+ln -sf "$(pwd)/cable/pj-herdr.toml" ~/.config/television/cable/pj-herdr.toml
+
+# Make scripts executable
+chmod +x scripts/*.sh
+
+# Reload herdr config
+herdr server reload-config
+```
 
 ## Links
 
