@@ -2,7 +2,7 @@
 
 ## What this project is
 
-`pj-herdr` is a [herdr](https://herdr.dev) plugin that bridges [pj](https://github.com/nickel-org/pj) (project jumper) with herdr workspaces. Pressing `Ctrl-s P` opens an overlay pane with a fuzzy project picker; selecting a project creates or switches to its herdr workspace.
+`pj-herdr` is a [herdr](https://herdr.dev) plugin that bridges [pj](https://github.com/nickel-org/pj) (project jumper) with herdr workspaces. Pressing `Ctrl-s O` opens an overlay pane with a fuzzy project picker; selecting a project creates or switches to its herdr workspace.
 
 ## File structure
 
@@ -22,7 +22,7 @@ README.md                  User-facing docs and install instructions
 Declares the plugin to herdr. Key fields:
 - `[[panes]]` — defines the `picker` overlay pane; herdr runs `pj-picker.sh` inside it
 - `[[actions]]` — `open-picker` action that opens the overlay pane
-- `[[keys.command]]` — binds `prefix+P` to `pj.open-picker`
+- `[[keys.command]]` — binds `prefix+O` to `pj.open-picker`
 
 Env vars herdr injects when running the pane:
 - `$HERDR_PLUGIN_ROOT` — absolute path to the plugin directory (this repo)
@@ -101,7 +101,7 @@ echo "picker=fzf" > "$(herdr plugin config-dir pj)/config"
 herdr plugin list
 
 # Trigger the picker
-# Press Ctrl-s P inside herdr
+# Press Ctrl-s O inside herdr
 ```
 
 ## Herdr plugin API reference
