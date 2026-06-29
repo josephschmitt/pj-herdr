@@ -19,6 +19,6 @@ command = ["bash", "-c", "$HERDR_BIN_PATH plugin pane open --plugin pj --entrypo
 
 [[keys.command]]
 key = "prefix+o"
-type = "pane"
-command = "herdr plugin action invoke open-picker --plugin pj"
+type = "plugin_action"
+command = "pj.open-picker"
 description = "Find and open a project (pj)"
