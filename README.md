@@ -26,7 +26,7 @@ Press `Ctrl-s O` → fuzzy-search your projects → hit Enter → herdr creates 
 herdr plugin install josephschmitt/pj-herdr
 ```
 
-Then add the keybinding to your `~/.config/herdr/config.toml`:
+Then add a keybinding of your choice to `~/.config/herdr/config.toml`:
 
 ```toml
 # pj project picker
@@ -35,8 +35,6 @@ key = "prefix+o"
 type = "plugin_action"
 command = "pj.open-picker"
 ```
-
-> herdr does not support plugin-defined keybindings — you configure your own key.
 
 Then reload:
 
