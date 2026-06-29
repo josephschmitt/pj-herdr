@@ -1,0 +1,24 @@
+id = "pj"
+name = "pj"
+version = "0.1.0"
+min_herdr_version = "0.7.0"
+description = "Project jumper — fuzzy-find pj projects and open them as herdr workspaces"
+platforms = ["macos", "linux"]
+
+[[panes]]
+id = "picker"
+title = "Projects"
+placement = "overlay"
+command = ["bash", "-lc", "$HERDR_PLUGIN_ROOT/scripts/pj-picker.sh"]
+
+[[actions]]
+id = "open-picker"
+title = "Open project picker"
+contexts = ["workspace"]
+command = ["bash", "-c", "$HERDR_BIN_PATH plugin pane open --plugin pj --entrypoint picker"]
+
+[[keys.command]]
+key = "prefix+P"
+type = "plugin_action"
+command = "pj.open-picker"
+description = "Find and open a project (pj)"
