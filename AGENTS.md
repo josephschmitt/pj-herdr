@@ -53,9 +53,9 @@ Shared workspace logic:
 | Key | Action |
 |-----|--------|
 | Enter | Connect: switch to existing workspace, or create one |
-| Ctrl-o | New workspace: always create (even if one exists) |
+| Ctrl-n | New workspace: always create (even if one exists) |
 | Ctrl-e | Edit: open project in `$EDITOR` |
-| Ctrl-n | New tab: `herdr tab create --cwd <path> --focus` |
+| Ctrl-t | New tab: `herdr tab create --cwd <path> --focus` |
 | Ctrl-r | Clear pj cache and reload list |
 
 ## Config file

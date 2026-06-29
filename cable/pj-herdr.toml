@@ -16,9 +16,9 @@ command = "eza --tree --color=always \"$(echo {strip_ansi|split: :1} | sed 's|^~
 
 [keybindings]
 enter = "actions:connect"
-ctrl-o = "actions:new_workspace"
+ctrl-n = "actions:new_workspace"
 ctrl-e = "actions:edit"
-ctrl-n = "actions:new_tab"
+ctrl-t = "actions:new_tab"
 ctrl-r = ["actions:clear_cache", "reload_source"]
 
 [actions.connect]

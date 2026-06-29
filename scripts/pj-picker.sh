@@ -45,8 +45,8 @@ case "$PICKER" in
             --reverse \
             --preview "$PREVIEW_CMD" \
             --preview-window=right:50% \
-            --header "enter: open workspace  ctrl-o: new workspace  ctrl-e: edit  ctrl-n: new tab  ctrl-r: clear cache" \
-            --expect "ctrl-o,ctrl-e,ctrl-n,ctrl-r" \
+            --header "enter: open workspace  ctrl-n: new workspace  ctrl-e: edit  ctrl-t: new tab  ctrl-r: clear cache" \
+            --expect "ctrl-n,ctrl-e,ctrl-t,ctrl-r" \
             --bind "ctrl-r:reload(pj --clear-cache >/dev/null 2>&1; pj --icons --ansi --shorten --sort alpha)" \
       || true)
 
@@ -60,13 +60,13 @@ case "$PICKER" in
     PROJECT_PATH=$(printf '%s' "$SELECTION" | sed 's/^[^ ]* //' | sed "s|^~|$HOME|")
 
     case "$KEY" in
-      ctrl-o)
+      ctrl-n)
         "$CONNECT_SCRIPT" --new "$PROJECT_PATH"
         ;;
       ctrl-e)
         ${EDITOR:-vi} "$PROJECT_PATH"
         ;;
-      ctrl-n)
+      ctrl-t)
         herdr tab create --cwd "$PROJECT_PATH" --focus
         ;;
       ctrl-r)

@@ -79,9 +79,9 @@ echo "picker=tv" > "$(herdr plugin config-dir pj)/config"
 |-----|--------|
 | `Ctrl-s P` | Open project picker |
 | `Enter` | Switch to workspace (create if none exists) |
-| `Ctrl-o` | Always create a new workspace |
+| `Ctrl-n` | Always create a new workspace |
 | `Ctrl-e` | Open project in `$EDITOR` |
-| `Ctrl-n` | Open new herdr tab with project as CWD |
+| `Ctrl-t` | Open new herdr tab with project as CWD |
 | `Ctrl-r` | Clear pj cache and reload project list |
 
 ## Links
