@@ -4,10 +4,10 @@ description = "Find and open pj projects as herdr workspaces"
 requirements = ["pj"]
 
 [source]
-command = [
-  "pj --icons --ansi --shorten --sort alpha",
-  "pj --icons --ansi --shorten --sort alpha --no-nested"
-]
+# Command is supplied at runtime via --source-command in pj-picker.sh,
+# built from the user's config file. This fallback runs if tv is invoked
+# directly without going through the launcher script.
+command = "pj --icons --ansi --shorten --sort alpha"
 ansi = true
 frecency = false
 

@@ -51,13 +51,17 @@ mkdir -p "$(herdr plugin config-dir pj)"
 echo "picker=tv" > "$(herdr plugin config-dir pj)/config"
 ```
 
-**Options:**
+All options are set in the config file as plain `key=value` pairs.
 
-| Value | Description |
-|-------|-------------|
-| `auto` | *(default)* Use `tv` if installed, otherwise `fzf` |
-| `tv` | Always use Television |
-| `fzf` | Always use fzf |
+| Option | Default | Description |
+|--------|---------|-------------|
+| `picker` | `auto` | Picker backend: `tv`, `fzf`, or `auto` (prefers tv) |
+| `sort` | `alpha` | Sort order: `alpha`, `priority`, or `label` |
+| `sort_direction` | *(pj default)* | Sort direction: `asc` or `desc` |
+| `icons` | `true` | Show marker-based icons (requires a Nerd Font) |
+| `ansi` | `true` | Colorize icons with ANSI codes |
+| `worktrees` | `auto` | Include git worktrees: `auto` (pj default), `yes`, or `no` |
+| `no_nested` | `false` | Skip projects nested inside other projects |
 
 ## Commands
 
