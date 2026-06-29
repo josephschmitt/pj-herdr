@@ -17,8 +17,5 @@ title = "Open project picker"
 contexts = ["workspace"]
 command = ["bash", "-c", "$HERDR_BIN_PATH plugin pane open --plugin pj --entrypoint picker --placement overlay --focus"]
 
-[[keys.command]]
-key = "prefix+o"
-type = "plugin_action"
-command = "pj.open-picker"
-description = "Find and open a project (pj)"
+# NOTE: [[keys.command]] in plugin manifests is not yet honoured by herdr 0.7.x.
+# Users must add the keybinding to their own config.toml — see README.md.

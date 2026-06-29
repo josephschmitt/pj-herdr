@@ -2,7 +2,7 @@
 
 A [herdr](https://herdr.dev) plugin that brings [pj](https://github.com/nickel-org/pj) project jumping to herdr workspaces.
 
-Press `Ctrl-s P` → fuzzy-search your projects → hit Enter → herdr creates or switches to that project's workspace.
+Press `Ctrl-s O` → fuzzy-search your projects → hit Enter → herdr creates or switches to that project's workspace.
 
 ## How it works
 
@@ -26,7 +26,19 @@ Press `Ctrl-s P` → fuzzy-search your projects → hit Enter → herdr creates 
 herdr plugin install josephschmitt/pj-herdr
 ```
 
-Then reload herdr config:
+Then add the keybinding to your `~/.config/herdr/config.toml`:
+
+```toml
+# pj project picker
+[[keys.command]]
+key = "prefix+o"
+type = "plugin_action"
+command = "pj.open-picker"
+```
+
+> herdr does not support plugin-defined keybindings — you configure your own key.
+
+Then reload:
 
 ```bash
 herdr server reload-config
