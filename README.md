@@ -61,6 +61,7 @@ All options are set in the config file as plain `key=value` pairs.
 | `icons` | `true` | Show marker-based icons (requires a Nerd Font) |
 | `ansi` | `true` | Colorize icons with ANSI codes |
 | `worktrees` | `auto` | Include git worktrees: `auto` (pj default), `yes`, or `no` |
+| `max_depth` | *(pj default)* | Maximum directory search depth |
 | `no_nested` | `false` | Skip projects nested inside other projects |
 
 ## Commands

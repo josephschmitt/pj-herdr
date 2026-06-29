@@ -38,6 +38,7 @@ SORT_DIRECTION=$(cfg sort_direction "")   # empty = let pj use its default
 ICONS=$(cfg_bool icons true)
 ANSI=$(cfg_bool ansi true)
 WORKTREES=$(cfg worktrees auto)           # auto|yes|no
+MAX_DEPTH=$(cfg max_depth "")
 NO_NESTED=$(cfg_bool no_nested false)
 
 # --- build pj flags ----------------------------------------------------------
@@ -46,6 +47,7 @@ PJ_FLAGS="--shorten --sort $SORT"
 [ -n "$SORT_DIRECTION" ]      && PJ_FLAGS="$PJ_FLAGS --sort-direction $SORT_DIRECTION"
 [ "$ICONS" = "true" ]         && PJ_FLAGS="$PJ_FLAGS --icons"
 [ "$ANSI" = "true" ]          && PJ_FLAGS="$PJ_FLAGS --ansi"
+[ -n "$MAX_DEPTH" ]           && PJ_FLAGS="$PJ_FLAGS --max-depth $MAX_DEPTH"
 [ "$NO_NESTED" = "true" ]     && PJ_FLAGS="$PJ_FLAGS --no-nested"
 case "$WORKTREES" in
   yes) PJ_FLAGS="$PJ_FLAGS --worktrees" ;;
