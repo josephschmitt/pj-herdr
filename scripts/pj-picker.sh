@@ -58,13 +58,29 @@ PJ_CMD="pj $PJ_FLAGS"
 
 # --- auto-detect picker ------------------------------------------------------
 
+die() {
+  echo "pj-herdr error: $*" >&2
+  echo "Press any key to close..." >&2
+  read -r -n1
+  exit 1
+}
+
 if [ "$PICKER" = "auto" ]; then
   if command -v tv &>/dev/null; then
     PICKER="tv"
-  else
+  elif command -v fzf &>/dev/null; then
     PICKER="fzf"
+  else
+    die "no picker found. Install tv or fzf, or set picker= in $CONFIG_FILE"
   fi
 fi
+
+# --- validate picker is installed --------------------------------------------
+
+case "$PICKER" in
+  tv)  command -v tv  &>/dev/null || die "picker=tv but 'tv' is not installed." ;;
+  fzf) command -v fzf &>/dev/null || die "picker=fzf but 'fzf' is not installed." ;;
+esac
 
 # --- dispatch ----------------------------------------------------------------
 
@@ -75,7 +91,8 @@ case "$PICKER" in
     # The cable channel supplies keybindings, preview, and actions.
     tv --cable-dir "$PLUGIN_ROOT/cable" \
        --source-command "$PJ_CMD" \
-       pj-herdr
+       pj-herdr \
+      || true
     ;;
 
   fzf)
