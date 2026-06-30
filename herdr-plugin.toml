@@ -1,6 +1,6 @@
 id = "pj"
 name = "pj"
-version = "0.1.0"
+version = "0.1.1"
 min_herdr_version = "0.7.0"
 description = "Project jumper — fuzzy-find pj projects and open them as herdr workspaces"
 platforms = ["macos", "linux"]
